@@ -1,0 +1,6 @@
+unique_name: con_ATSCALE_SAMPLE_DATA_as_adventure
+object_type: connection
+label: con_ATSCALE_SAMPLE_DATA_as_adventure
+as_connection: Snowflake Engineering
+database: ATSCALE_SAMPLE_DATA
+schema: as_adventure

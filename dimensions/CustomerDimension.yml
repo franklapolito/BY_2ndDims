@@ -1,0 +1,79 @@
+unique_name: CustomerDimension
+object_type: dimension
+label: Customer Dimension
+hierarchies:
+  - unique_name: CustomerDimHiere
+    label: Customer Hierarchy
+    levels:
+      - unique_name: Customer Full Name
+        secondary_attributes:
+          - unique_name: commutedistance
+            label: Commute Distance
+            contains_unique_names: false
+            dataset: dimcustomer
+            folder: Customer Attributes
+            is_aggregatable: false
+            is_unique_key: false
+            key_columns:
+              - commutedistance
+            name_column: commutedistance
+          - unique_name: emailaddress
+            label: email address
+            contains_unique_names: false
+            dataset: dimcustomer
+            is_aggregatable: false
+            is_unique_key: false
+            key_columns:
+              - emailaddress
+            name_column: emailaddress
+          - unique_name: birthdate
+            label: Birthdate
+            contains_unique_names: false
+            dataset: dimcustomer
+            is_unique_key: false
+            key_columns:
+              - birthdate
+            name_column: birthdate
+          - unique_name: PhoneNum
+            label: Phone Number
+            contains_unique_names: false
+            dataset: dimcustomer
+            is_unique_key: false
+            key_columns:
+              - phone
+            name_column: phone
+  - unique_name: CustomerGenderHierarchy
+    label: Customer Gender Hierarchy
+    folder: Customer Attributes
+    levels:
+      - unique_name: gender
+      - unique_name: Customer Full Name
+level_attributes:
+  - unique_name: Customer Full Name
+    label: Customer Full Name
+    contains_unique_names: false
+    dataset: dimcustomer
+    is_unique_key: true
+    key_columns:
+      - customerkey
+    name_column: CustomerFullName
+  - unique_name: gender
+    label: gender
+    contains_unique_names: false
+    dataset: dimcustomer
+    key_columns:
+      - gender
+    name_column: gender
+relationships:
+  - unique_name: dimcustomer_geographykey_to_GeographyDimension_CityEnglishName
+    from:
+      dataset: dimcustomer
+      hierarchy: CustomerDimHiere
+      join_columns:
+        - geographykey
+      level: Customer Full Name
+    to:
+      dimension: GeographyDimension
+      level: CityEnglishName
+    type: embedded
+type: standard

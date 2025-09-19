@@ -1,0 +1,18 @@
+unique_name: dimsalesterritory
+object_type: dataset
+label: dimsalesterritory
+columns:
+  - name: salesterritorykey
+    data_type: decimal(38,0)
+  - name: salesterritoryalternatekey
+    data_type: decimal(38,0)
+  - name: salesterritoryregion
+    data_type: string
+  - name: salesterritorycountry
+    data_type: string
+  - name: salesterritorygroup
+    data_type: string
+  - name: salesterritoryimage
+    data_type: string
+connection_id: con_ATSCALE_SAMPLE_DATA_as_adventure
+table: dimsalesterritory

@@ -12,3 +12,11 @@ relationships:
     to:
       dimension: Product
       level: ProductEngName
+  - unique_name: factinternetsales_customerkey_to_CustomerDimension_Customer Full Name
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - customerkey
+    to:
+      dimension: CustomerDimension
+      level: Customer Full Name

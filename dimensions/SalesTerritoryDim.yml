@@ -1,0 +1,36 @@
+unique_name: SalesTerritoryDim
+object_type: dimension
+label: Sales Territory Dimension
+hierarchies:
+  - unique_name: SalesTerritory
+    label: Sales Territory
+    folder: Customer Attributes
+    levels:
+      - unique_name: salesterritorygroup
+      - unique_name: salesterritorycountry
+      - unique_name: SalesTerritoryLevel
+level_attributes:
+  - unique_name: SalesTerritoryLevel
+    label: Sales Territory
+    contains_unique_names: false
+    dataset: dimsalesterritory
+    is_aggregatable: false
+    is_unique_key: true
+    key_columns:
+      - salesterritorykey
+    name_column: salesterritoryregion
+  - unique_name: salesterritorycountry
+    label: salesterritorycountry
+    contains_unique_names: false
+    dataset: dimsalesterritory
+    key_columns:
+      - salesterritorycountry
+    name_column: salesterritorycountry
+  - unique_name: salesterritorygroup
+    label: salesterritorygroup
+    contains_unique_names: false
+    dataset: dimsalesterritory
+    key_columns:
+      - salesterritorygroup
+    name_column: salesterritorygroup
+type: standard

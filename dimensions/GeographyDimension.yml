@@ -1,0 +1,30 @@
+unique_name: GeographyDimension
+object_type: dimension
+label: Geography Dimension
+hierarchies:
+  - unique_name: Geography Dimension
+    label: Geography Dimension
+    levels:
+      - unique_name: CityEnglishName
+level_attributes:
+  - unique_name: CityEnglishName
+    label: City English Name
+    contains_unique_names: false
+    dataset: dimgeography
+    is_unique_key: false
+    key_columns:
+      - geographykey
+    name_column: city
+relationships:
+  - unique_name: dimgeography_salesterritorykey_to_SalesTerritoryDim_SalesTerritoryLevel
+    from:
+      dataset: dimgeography
+      hierarchy: Geography Dimension
+      join_columns:
+        - salesterritorykey
+      level: CityEnglishName
+    to:
+      dimension: SalesTerritoryDim
+      level: SalesTerritoryLevel
+    type: embedded
+type: standard
