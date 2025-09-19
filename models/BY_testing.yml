@@ -1,0 +1,14 @@
+unique_name: BY_testing
+object_type: model
+label: BY_Testing
+metrics:
+  - unique_name: m_factinternetsales_orderquantity_sum
+relationships:
+  - unique_name: factinternetsales_productkey_to_Product_ProductEngName
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - productkey
+    to:
+      dimension: Product
+      level: ProductEngName

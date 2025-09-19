@@ -1,0 +1,6 @@
+unique_name: con_ATSCALE_SAMPLE_DATA_adventureworks2012
+object_type: connection
+label: con_ATSCALE_SAMPLE_DATA_adventureworks2012
+as_connection: Snowflake Engineering
+database: ATSCALE_SAMPLE_DATA
+schema: adventureworks2012

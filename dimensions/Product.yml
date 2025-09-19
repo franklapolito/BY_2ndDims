@@ -1,0 +1,37 @@
+unique_name: Product
+object_type: dimension
+label: Product
+hierarchies:
+  - unique_name: Product Hierarchy
+    label: Product Hierarchy
+    levels:
+      - unique_name: ProductEngName
+        secondary_attributes:
+          - unique_name: color
+            label: color
+            contains_unique_names: false
+            dataset: dimproduct
+            is_aggregatable: false
+            is_unique_key: false
+            key_columns:
+              - color
+            name_column: color
+          - unique_name: safetystocklevel
+            label: safetystocklevel
+            contains_unique_names: false
+            dataset: dimproduct
+            is_aggregatable: false
+            is_unique_key: false
+            key_columns:
+              - safetystocklevel
+            name_column: safetystocklevel
+level_attributes:
+  - unique_name: ProductEngName
+    label: Product Eng Name
+    contains_unique_names: false
+    dataset: dimproduct
+    is_unique_key: true
+    key_columns:
+      - productkey
+    name_column: englishproductname
+type: standard

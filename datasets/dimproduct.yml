@@ -1,0 +1,78 @@
+unique_name: dimproduct
+object_type: dataset
+label: dimproduct
+columns:
+  - name: productkey
+    data_type: decimal(38,0)
+  - name: productalternatekey
+    data_type: string
+  - name: productsubcategorykey
+    data_type: decimal(38,0)
+  - name: weightunitmeasurecode
+    data_type: string
+  - name: sizeunitmeasurecode
+    data_type: string
+  - name: englishproductname
+    data_type: string
+  - name: spanishproductname
+    data_type: string
+  - name: frenchproductname
+    data_type: string
+  - name: standardcost
+    data_type: double
+  - name: finishedgoodsflag
+    data_type: boolean
+  - name: color
+    data_type: string
+  - name: safetystocklevel
+    data_type: decimal(38,0)
+  - name: reorderpoint
+    data_type: decimal(38,0)
+  - name: listprice
+    data_type: double
+  - name: size
+    data_type: string
+  - name: sizerange
+    data_type: string
+  - name: weight
+    data_type: double
+  - name: daystomanufacture
+    data_type: decimal(38,0)
+  - name: productline
+    data_type: string
+  - name: dealerprice
+    data_type: double
+  - name: class
+    data_type: string
+  - name: style
+    data_type: string
+  - name: modelname
+    data_type: string
+  - name: largephoto
+    data_type: string
+  - name: englishdescription
+    data_type: string
+  - name: frenchdescription
+    data_type: string
+  - name: chinesedescription
+    data_type: string
+  - name: arabicdescription
+    data_type: string
+  - name: hebrewdescription
+    data_type: string
+  - name: thaidescription
+    data_type: string
+  - name: germandescription
+    data_type: string
+  - name: japanesedescription
+    data_type: string
+  - name: turkishdescription
+    data_type: string
+  - name: startdate
+    data_type: datetime
+  - name: enddate
+    data_type: datetime
+  - name: status
+    data_type: string
+connection_id: con_ATSCALE_SAMPLE_DATA_adventureworks2012
+table: dimproduct

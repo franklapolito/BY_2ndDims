@@ -1,0 +1,67 @@
+unique_name: dimcustomer
+object_type: dataset
+label: dimcustomer
+columns:
+  - name: customerkey
+    data_type: decimal(38,0)
+  - name: geographykey
+    data_type: decimal(38,0)
+  - name: customeralternatekey
+    data_type: string
+  - name: title
+    data_type: string
+  - name: firstname
+    data_type: string
+  - name: middlename
+    data_type: string
+  - name: lastname
+    data_type: string
+  - name: namestyle
+    data_type: boolean
+  - name: birthdate
+    data_type: date
+  - name: maritalstatus
+    data_type: string
+  - name: suffix
+    data_type: string
+  - name: gender
+    data_type: string
+  - name: emailaddress
+    data_type: string
+  - name: yearlyincome
+    data_type: double
+  - name: totalchildren
+    data_type: decimal(38,0)
+  - name: numberchildrenathome
+    data_type: decimal(38,0)
+  - name: englisheducation
+    data_type: string
+  - name: spanisheducation
+    data_type: string
+  - name: frencheducation
+    data_type: string
+  - name: englishoccupation
+    data_type: string
+  - name: spanishoccupation
+    data_type: string
+  - name: frenchoccupation
+    data_type: string
+  - name: houseownerflag
+    data_type: decimal(38,0)
+  - name: numbercarsowned
+    data_type: decimal(38,0)
+  - name: addressline1
+    data_type: string
+  - name: addressline2
+    data_type: string
+  - name: phone
+    data_type: string
+  - name: datefirstpurchase
+    data_type: date
+  - name: commutedistance
+    data_type: string
+  - name: CustomerFullName
+    data_type: string
+    sql: CONCAT('firstname', ' ', 'lastname')
+connection_id: con_ATSCALE_SAMPLE_DATA_adventureworks2012
+table: dimcustomer
