@@ -11,7 +11,7 @@ level_attributes:
     label: City English Name
     contains_unique_names: false
     dataset: dimgeography
-    is_unique_key: false
+    is_unique_key: true
     key_columns:
       - geographykey
     name_column: city
@@ -25,6 +25,6 @@ relationships:
       level: CityEnglishName
     to:
       dimension: SalesTerritoryDim
-      level: SalesTerritoryLevel
+      level: SalesTerritoryRegion
     type: embedded
 type: standard

@@ -8,13 +8,12 @@ hierarchies:
     levels:
       - unique_name: salesterritorygroup
       - unique_name: salesterritorycountry
-      - unique_name: SalesTerritoryLevel
+      - unique_name: SalesTerritoryRegion
 level_attributes:
-  - unique_name: SalesTerritoryLevel
-    label: Sales Territory
+  - unique_name: SalesTerritoryRegion
+    label: Sales Territory Region
     contains_unique_names: false
     dataset: dimsalesterritory
-    is_aggregatable: false
     is_unique_key: true
     key_columns:
       - salesterritorykey
