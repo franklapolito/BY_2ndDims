@@ -1,0 +1,18 @@
+unique_name: Product Category Dimension
+object_type: dimension
+label: Product Category Dimension
+hierarchies:
+  - unique_name: ProductCategoryHierarchy
+    label: Product Category Hierarchy
+    levels:
+      - unique_name: Product Category Dimension Level
+level_attributes:
+  - unique_name: Product Category Dimension Level
+    label: Product Category Dimension Level
+    contains_unique_names: false
+    dataset: dimproductcategory
+    is_unique_key: false
+    key_columns:
+      - productcategorykey
+    name_column: englishproductcategoryname
+type: standard

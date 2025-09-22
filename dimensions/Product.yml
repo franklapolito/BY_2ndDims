@@ -34,4 +34,5 @@ level_attributes:
     key_columns:
       - productkey
     name_column: englishproductname
+relationships: []
 type: standard
